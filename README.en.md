@@ -45,13 +45,13 @@ Measurements over intuition; heavy features computed once and kept separate from
 
 ## In progress: catalogue colour scale
 
-The whole catalogue laid out in one light-to-dark strip and split into 12 colour blocks based on reference colour swatches; each product goes to the nearest block, and clicking a block shows its products next to the reference. Useful for "a bit darker than this one" and for purchasing.
+A side task that emerged during the project. The whole catalogue laid out in one light-to-dark strip and split into 12 colour blocks based on reference colour swatches; each product goes to the nearest block, and clicking a block shows its products next to the reference. Useful for "a bit darker than this one" and for purchasing.
 
 ![Colour scale](docs/color_scale.jpg)
 
 ## Status and plans
 
-Done: laminate (~2,050 products) working locally, index extended to 3,012 products, a first pattern/material model on website labels, interface, colour scale, labelling tool. Next: manual labelling (in progress) and retraining on verified labels, full catalogue (~12k products), all product photos, a manual evaluation set from consultants, deployment with "find by photo" and "similar in stock" on the website.
+Done: laminate (~2,050 products) working locally, index extended to 3,012 products, a first pattern/material model on website labels, interface, labelling tool; the colour scale is in progress. Next: manual labelling (in progress) and retraining on verified labels, full catalogue (~12k products), all product photos, a manual evaluation set from consultants, deployment with "find by photo" and "similar in stock" on the website.
 
 Related project: [AI-Floor](https://github.com/ShubaAlex/ai-floor-visualizer) — trying the chosen floor on a room photo.
 
