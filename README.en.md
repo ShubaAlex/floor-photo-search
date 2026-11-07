@@ -19,6 +19,7 @@ Generic visual search compares whole images and finds a similar room or sofa, no
 ![Pipeline](docs/flow.png)
 
 1. **Floor mask:** UperNet + ConvNeXt-Tiny (ADE20K), ONNX int8 on CPU; rugs are a separate class; close-up / interior / whole-frame modes; white backgrounds of samples are cut out.
+   ![Interior: light herringbone](docs/search_interior.jpg)
 2. **Multi-scale patches** on both catalogue and query side, only patches ≥ 90 % inside the mask.
    ![Close-up: multi-scale patches](docs/search_closeup.jpg)
 3. **Texture:** DINOv2-small, patch-token mean beat the CLS vector.
