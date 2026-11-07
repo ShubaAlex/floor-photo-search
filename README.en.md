@@ -23,7 +23,7 @@ Generic visual search compares whole images and finds a similar room or sofa, no
 3. **Texture:** DINOv2-small, patch-token mean beat the CLS vector.
 4. **Colour:** CIELAB median and dominant colours, CIEDE2000. Lighting correction was implemented but hurt results and is off by default.
 5. **Fusion:** Reciprocal Rank Fusion of the texture and colour rankings, duplicate decors merged, results tiered by pattern and material.
-6. **Pattern and material:** zero-shot SigLIP 2 for laying pattern (0.960 accuracy, 0.979 balanced on interior photos), a logistic-regression head on SigLIP 2 embeddings for wood/stone (0.965); splits by product and collection.
+6. **Pattern and material, first iteration:** zero-shot SigLIP 2 for laying pattern and a logistic-regression head on SigLIP 2 embeddings for wood/stone, trained and checked on a small sample with labels taken from the website (preliminary: pattern 0.960, material 0.965). Its main result was the discrepancies: many products are labelled "herringbone" on the site but are not herringbone in the photo. Manual labelling is under way; the classifier will be retrained on verified data to rank by pattern more precisely.
 
 ## Evaluation
 
@@ -43,7 +43,7 @@ Measurements over intuition; heavy features computed once and kept separate from
 
 ## Status and plans
 
-Done: laminate (~2,050 products) working locally, index extended to 3,012 products, pattern and material detection, interface, colour scale, labelling tool. Next: full catalogue (~12k products), all product photos, training on verified labels, a manual evaluation set from consultants, deployment with "find by photo" and "similar in stock" on the website.
+Done: laminate (~2,050 products) working locally, index extended to 3,012 products, a first pattern/material model on website labels, interface, colour scale, labelling tool. Next: manual labelling (in progress) and retraining on verified labels, full catalogue (~12k products), all product photos, a manual evaluation set from consultants, deployment with "find by photo" and "similar in stock" on the website.
 
 Related project: [AI-Floor](https://github.com/ShubaAlex/ai-floor-visualizer) — trying the chosen floor on a room photo.
 
