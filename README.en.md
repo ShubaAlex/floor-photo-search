@@ -20,6 +20,7 @@ Generic visual search compares whole images and finds a similar room or sofa, no
 
 1. **Floor mask:** UperNet + ConvNeXt-Tiny (ADE20K), ONNX int8 on CPU; rugs are a separate class; close-up / interior / whole-frame modes; white backgrounds of samples are cut out.
 2. **Multi-scale patches** on both catalogue and query side, only patches ≥ 90 % inside the mask.
+   ![Close-up: multi-scale patches](docs/search_closeup.jpg)
 3. **Texture:** DINOv2-small, patch-token mean beat the CLS vector.
 4. **Colour:** CIELAB median and dominant colours, CIEDE2000. Lighting correction was implemented but hurt results and is off by default.
 5. **Fusion:** Reciprocal Rank Fusion of the texture and colour rankings, duplicate decors merged, results tiered by pattern and material.
