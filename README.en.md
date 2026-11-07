@@ -43,6 +43,12 @@ An interior photo from a product's gallery is the query, the product itself is t
 
 Measurements over intuition; heavy features computed once and kept separate from the matching method (0.1–0.2 s to switch); honest tuning/control split; frozen snapshots protect a good ranking from regressions; long stages (catalogue crawl at ≤ 2 req/s, labelling thousands of photos, embeddings) were run and supervised by a local agent with logs and resumable steps; segmentation (ONNX Runtime) and embeddings (PyTorch) run as two HTTP services; only MIT / Apache 2.0 models.
 
+## In progress: catalogue colour scale
+
+The whole catalogue laid out in one light-to-dark strip and split into 12 colour blocks based on reference colour swatches; each product goes to the nearest block, and clicking a block shows its products next to the reference. Useful for "a bit darker than this one" and for purchasing.
+
+![Colour scale](docs/color_scale.jpg)
+
 ## Status and plans
 
 Done: laminate (~2,050 products) working locally, index extended to 3,012 products, a first pattern/material model on website labels, interface, colour scale, labelling tool. Next: manual labelling (in progress) and retraining on verified labels, full catalogue (~12k products), all product photos, a manual evaluation set from consultants, deployment with "find by photo" and "similar in stock" on the website.
