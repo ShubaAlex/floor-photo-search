@@ -2,7 +2,7 @@
 
 **[Русская версия](README.md)**
 
-A customer sends a photo of a floor — a Pinterest interior, a designer's render, a phone snapshot of a sample. The service finds the floor in the photo, removes rugs, furniture and glare, describes the floor by colour and texture, and returns similar products from an online flooring store's catalogue. Open models only, on a regular CPU, no paid APIs; customer photos never leave the system.
+A customer sends a photo of a floor — a Pinterest interior, a designer's render, a phone snapshot of a sample. The service finds the floor in the photo, removes rugs, furniture and glare, describes the floor by colour and texture, and returns similar products from an online flooring store's catalogue. Open models only, on a regular CPU, no paid APIs; customer photos never leave the system. Beyond colour and texture it detects the laying pattern and material and ranks matching products higher; grade (natur / select / rustic) is next.
 
 > **This is a project description.** The code is not published. Status: working internal prototype.
 
@@ -57,7 +57,7 @@ A side task that emerged during the project. The whole catalogue laid out in one
 
 ## Status and plans
 
-Done: laminate (~2,050 products) working locally, index extended to 3,012 products, a first pattern/material model on website labels, interface, labelling tool; the colour scale is in progress. Next: manual labelling (in progress) and retraining on verified labels, full catalogue (~12k products), all product photos, a manual evaluation set from consultants, deployment with "find by photo" and "similar in stock" on the website.
+Done: laminate (~2,050 products) working locally, index extended to 3,012 products, a first pattern/material model on website labels, interface, labelling tool; the colour scale is in progress. Next: manual labelling (in progress) and retraining on verified labels, full catalogue (~12k products), all product photos, a manual evaluation set from consultants, grade detection, a business ranking layer on top of similarity (in stock, margin, popularity, quality) validated by A/B tests, deployment with "find by photo" and "similar in stock" on the website.
 
 Related project: [AI-Floor](https://github.com/ShubaAlex/ai-floor-visualizer) — trying the chosen floor on a room photo.
 
