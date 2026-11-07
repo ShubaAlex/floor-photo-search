@@ -31,6 +31,12 @@ Generic visual search compares whole images and finds a similar room or sofa, no
 
 An interior photo from a product's gallery is the query, the product itself is the answer; the index holds only the first (close-up) photo. 200 queries split into tuning and control halves; about 830 configurations tested.
 
+Every stage of the algorithm is a switch on the search page (texture features and aggregation, patch scale, colour statistic and formula, lighting correction, fusion, texture/colour weight, the card's "shade" field, frame edges), with "as before", "best measured" and side-by-side modes; the same switches were run automatically over all 200 queries.
+
+![Search settings](docs/settings.jpg)
+
+Best measured configuration: patch-token texture vectors, median over patches, whole + half scale, median colour, CIEDE2000, no lighting correction, RRF fusion, 30 % texture / 70 % colour, card "shade" ignored, colour per patch without frame edges.
+
 ![Top-10](docs/metrics.png)
 
 ![Findings](docs/findings.png)
